@@ -6,12 +6,18 @@
 [![GitHub stars](https://img.shields.io/github/stars/wyuzhou6/FX_MOCK_HEDGE.svg?style=social&label=Star)](https://github.com/wyuzhou6/FX_MOCK_HEDGE)
 [![GitHub forks](https://img.shields.io/github/forks/wyuzhou6/FX_MOCK_HEDGE.svg?style=social&label=Fork)](https://github.com/wyuzhou6/FX_MOCK_HEDGE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/wyuzhou6/FX_MOCK_HEDGE.svg)](https://github.com/wyuzhou6/FX_MOCK_HEDGE/commits/main)
+
+---
+
 ## Project Overview
 
 **FX_MOCK_HEDGE** is a Python framework for backtesting FX hedging strategies across multiple contract cycles (e.g., 1M, 3M, 6M).  
 It supports transaction cost simulation, automated result visualization, and professional engineering with modularity, testability, and CI/CD integration.
 
 The project is suitable for quantitative finance research, financial engineering coursework, and as a portfolio sample for job applications.
+
+---
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -22,6 +28,8 @@ The project is suitable for quantitative finance research, financial engineering
 - [Extending the Project](#extending-the-project)
 - [Testing & CI](#testing--ci)
 - [License](#license)
+
+---
 
 ## Project Structure
 
@@ -42,35 +50,47 @@ FX_MOCK_HEDGE/
 └── .github/workflows/ci.yml # GitHub Actions workflow for CI
 
 
+---
+
 ## Requirements
 
 - Python 3.10 or above
 - See [requirements.txt](./requirements.txt) for details
 
-Key packages:
+**Key packages:**
 - pandas
 - numpy
 - matplotlib
 - pytest
 
+---
+
 ## Quick Start
 
 1. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Prepare data:
-Make sure all necessary CSV files (mock positions, FX spot, forwards, etc.) are in the data/ directory.
+2. **Prepare data:**  
+   Make sure all necessary CSV files (mock positions, FX spot, forwards, etc.) are in the `data/` directory.  
+   _See `src/data_loader.py` for required file names and columns._
 
-See src/data_loader.py for required file names and columns.
+3. **Run a full backtest:**
+    ```bash
+    python src/run_backtest.py
+    ```
 
-3. Run a full backtest:
-python src/run_backtest.py
+4. **View results:**  
+   Output charts and full results tables will be generated in the `result/` directory.
 
-4. View results:
-Output charts and full results tables will be generated in the result/ directory.
+5. **Run tests locally (optional):**
+    ```bash
+    export PYTHONPATH=$(pwd)
+    pytest
+    ```
 
+---
 
 ## Core Features
 
@@ -91,7 +111,9 @@ Output charts and full results tables will be generated in the result/ directory
 
 - **CI/CD ready:**  
   GitHub Actions runs all unit tests automatically on every push or pull request.
-  
+
+---
+
 ## Extending the Project
 
 - **Add more contract cycles:**  
@@ -108,15 +130,20 @@ Output charts and full results tables will be generated in the result/ directory
 
 - **All modules are fully covered by automated tests and CI.**
 
+---
+
 ## Testing & CI
 
 - All key modules have corresponding unit tests under `tests/`
 - CI runs all tests on every commit and PR via GitHub Actions (see green badge above)
 - To run all tests locally, use:
 
-  ```bash
-  export PYTHONPATH=$(pwd)
-  pytest
+    ```bash
+    export PYTHONPATH=$(pwd)
+    pytest
+    ```
+
+---
 
 ## License
 
