@@ -32,7 +32,7 @@ The project is suitable for quantitative finance research, financial engineering
 ---
 
 ## Project Structure
-
+```
 FX_MOCK_HEDGE/
 │
 ├── src/ # Source code (modular, functional)
@@ -48,7 +48,7 @@ FX_MOCK_HEDGE/
 ├── requirements.txt # Python dependencies
 ├── README.md # This file
 └── .github/workflows/ci.yml # GitHub Actions workflow for CI
-
+```
 
 ---
 
