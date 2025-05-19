@@ -1,40 +1,24 @@
-name: CI Pipeline
+name: Python Package
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  test-and-report:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.10
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install pytest
-
-      - name: Run unit tests
-        run: |
-          pytest tests/
-
-      - name: Run main analysis
-        run: |
-          python main.py
-
-      - name: Archive output (result/)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: simulation-results
-          path: result/
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
+    - name: Run pytest
+      run: pytest
