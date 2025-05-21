@@ -17,6 +17,6 @@ def test_hedging_backtest_basic():
         assert res[col].dtype.kind in 'fi'  # float or integer type
 
     # Check volatilities are non-negative
-    assert out['hedged_std'] >= 0
-    assert out['hedged_tc_std'] >= 0
+    assert out['partial_hedged_std'] >= 0
+    assert out['partial_hedged_tc_std'] >= 0
     assert out['unhedged_std'] >= 0
