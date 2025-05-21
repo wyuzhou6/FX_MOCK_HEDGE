@@ -3,9 +3,7 @@
 [![Python Package CI](https://github.com/wyuzhou6/FX_MOCK_HEDGE/actions/workflows/ci.yml/badge.svg)](https://github.com/wyuzhou6/FX_MOCK_HEDGE/actions/workflows/ci.yml)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/wyuzhou6/FX_MOCK_HEDGE.svg?style=social&label=Star)](https://github.com/wyuzhou6/FX_MOCK_HEDGE)
-[![GitHub forks](https://img.shields.io/github/forks/wyuzhou6/FX_MOCK_HEDGE.svg?style=social&label=Fork)](https://github.com/wyuzhou6/FX_MOCK_HEDGE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/wyuzhou6/FX_MOCK_HEDGE.svg)](https://github.com/wyuzhou6/FX_MOCK_HEDGE/commits/main)
+
 
 ---
 
